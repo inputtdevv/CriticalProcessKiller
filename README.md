@@ -1,6 +1,6 @@
 # CriticalProcessKiller
 
-zTo add a file to critical process check out my other [repo](https://github.com/inputtdevv/SetCriticalProcess/tree/main)
+To add a file to critical process check out my other [repo](https://github.com/inputtdevv/SetCriticalProcess/tree/main)
 
 
 **Made by Inputt Please star my repo!**  
