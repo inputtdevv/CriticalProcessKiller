@@ -5,7 +5,7 @@ using System.Security.Principal;
 
 
 
-//  Made By Inputt 
+//  Made By Inputt Star my repo please!  https://github.com/inputtdevv/CriticalProcessKiller/
 namespace CProcKiller
 {
     class Program
@@ -79,7 +79,7 @@ namespace CProcKiller
                 Console.Write(pidText[i]);
             }
             Console.ResetColor();
-            Console.WriteLine("\nSafe Critical Process Killer Active");
+            Console.WriteLine("\Critical Process Killer - https://github.com/inputtdevv/CriticalProcessKiller/edit/main/Killer.cs Created by inputt");
 
             Console.Write("[");
             for (int i = 0; i < 1; i++)
@@ -124,7 +124,7 @@ namespace CProcKiller
                     if (targetIsCritical)
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"\n[!] '{processName}' is critical. Disabling critical flag to kill safely.");
+                        Console.WriteLine($"\n[!] '{processName}' is critical. Disabling critical flag to kill it.");
                         Console.ResetColor();
 
                         hProcess = OpenProcess(ProcAllAccess, false, pid);
@@ -148,17 +148,17 @@ namespace CProcKiller
                     process.WaitForExit(5000);
 
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"\n[+] Process '{process.ProcessName}' (PID: {pid}) terminated safely.");
+                    Console.WriteLine($"\n[+] Process '{process.ProcessName}' (PID: {pid}) terminated safley.");
                     if (targetIsCritical)
                     {
-                        Console.WriteLine("[+] Critical flag disabled - no BSOD.");
+                        Console.WriteLine("[+] Critical flag disabled - no crash.");
                     }
                     Console.ResetColor();
                 }
                 catch (ArgumentException)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\n[!] Invalid PID: No process found with that ID.");
+                    Console.WriteLine("\n[!] Invalid PID: No process found with that PID.");
                     Console.ResetColor();
                 }
                 catch (Exception ex)
