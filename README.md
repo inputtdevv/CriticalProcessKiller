@@ -2,7 +2,6 @@
 
 zTo add a file to critical process check out my other [repo](https://github.com/inputtdevv/SetCriticalProcess/tree/main)
 
-![CriticalProcessKiller](https://img.shields.io/badge/status-Experimental-red)
 
 **Made by Inputt Please star my repo!**  
 GitHub: [https://github.com/inputtdevv/CriticalProcessKiller](https://github.com/inputtdevv/CriticalProcessKiller/)
