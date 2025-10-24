@@ -8,7 +8,7 @@ GitHub: [https://github.com/inputtdevv/CriticalProcessKiller](https://github.com
 
 A C# tool designed to terminate **critical Windows processes safely** by disabling the critical process flag before killing them. Useful for testing, debugging, or managing stubborn processes that normally cannot be terminated.
 
-> ⚠️ **Warning:** Killing critical system processes can crash your system. Use this tool **responsibly** and at your own risk I am not liable for any damages caused.
+> ⚠️ **Warning:** Killing critical system processes can crash your system. Use this tool **responsibly** at your own risk I am not liable for any damages caused.
 
 ---
 
