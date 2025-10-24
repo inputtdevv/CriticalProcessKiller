@@ -1,17 +1,18 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Security.Principal; 
+using System.Security.Principal;
 
-
-
-//  Made By Inputt Star my repo please!  https://github.com/inputtdevv/CriticalProcessKiller/
 namespace CProcKiller
 {
+    //  Made By Inputt Please Star my repo!  https://github.com/inputtdevv/CriticalProcessKiller/
     class Program
     {
         [DllImport("ntdll.dll", SetLastError = true)]
         static extern int NtSetInformationProcess(IntPtr hProcess, int processInformationClass, ref int processInformation, int processInformationLength);
+
+        [DllImport("ntdll.dll", SetLastError = true)]
+        static extern int NtQueryInformationProcess(IntPtr ProcessHandle, int ProcessInformationClass, ref int ProcessInformation, int ProcessInformationLength, out int ReturnLength);
 
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern IntPtr OpenProcess(uint dwDesiredAccess, bool bInheritHandle, int dwProcessId);
@@ -79,7 +80,7 @@ namespace CProcKiller
                 Console.Write(pidText[i]);
             }
             Console.ResetColor();
-            Console.WriteLine("\Critical Process Killer - https://github.com/inputtdevv/CriticalProcessKiller/edit/main/Killer.cs Created by inputt");
+            Console.WriteLine("\n Critical Process Killer - https://github.com/inputtdevv/CriticalProcessKiller/edit/main/Killer.cs Created by inputt");
 
             Console.Write("[");
             for (int i = 0; i < 1; i++)
@@ -113,27 +114,22 @@ namespace CProcKiller
                     if (hProcess != IntPtr.Zero)
                     {
                         int criticalFlag = 0;
-                        int result = NtSetInformationProcess(hProcess, BreakOnTermination, ref criticalFlag, 4);
+                        int returnLength;
+                        int result = NtQueryInformationProcess(hProcess, BreakOnTermination, ref criticalFlag, 4, out returnLength);
                         if (result == 0)
                         {
-                            targetIsCritical = (criticalFlag == 1);
+                            targetIsCritical = (criticalFlag != 0);
                         }
-                        CloseHandle(hProcess);
-                    }
-
-                    if (targetIsCritical)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"\n[!] '{processName}' is critical. Disabling critical flag to kill it.");
-                        Console.ResetColor();
-
-                        hProcess = OpenProcess(ProcAllAccess, false, pid);
-                        if (hProcess != IntPtr.Zero)
+                        if (targetIsCritical)
                         {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"\n[!] '{processName}' is critical. Disabling critical flag to kill it.");
+                            Console.ResetColor();
+
                             int disableCritical = 0;
                             NtSetInformationProcess(hProcess, BreakOnTermination, ref disableCritical, 4);
-                            CloseHandle(hProcess);
                         }
+                        CloseHandle(hProcess);
                     }
 
                     Console.ForegroundColor = ConsoleColor.Yellow;
