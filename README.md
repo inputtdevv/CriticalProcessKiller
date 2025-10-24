@@ -14,7 +14,7 @@ A C# tool designed to terminate **critical Windows processes safely** by disabli
 
 
 
-## Image
+## Images
 ![Preview](https://www.silkcoding.dev/stalled/Screenshot%202025-10-24%20175229.png)
 
 ## Features
