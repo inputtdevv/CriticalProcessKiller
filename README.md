@@ -60,7 +60,11 @@ This tool leverages Windows API calls and P/Invoke to interact with processes:
 
 ## Usage
 
-1. Clone the repository:
+ 1. Clone the repository:
 
 ```bash
 git clone https://github.com/inputtdevv/CriticalProcessKiller.git
+```
+2. Build it into an exe with Visual Studio
+
+3. Run the executable.
