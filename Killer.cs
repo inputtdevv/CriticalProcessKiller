@@ -5,7 +5,7 @@ using System.Security.Principal;
 
 namespace CProcKiller
 {
-    //  Made By Inputt Please Star my repo!  https://github.com/inputtdevv/CriticalProcessKiller/
+    //  Made By Inputt Please Star my repo!  https://github.com/inputtdevv/CriticalProcessKiller/ !
     class Program
     {
         [DllImport("ntdll.dll", SetLastError = true)]
