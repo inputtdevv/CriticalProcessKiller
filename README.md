@@ -12,6 +12,11 @@ A C# tool designed to terminate **critical Windows processes safely** by disabli
 
 ---
 
+
+
+## Image
+![Preview](https://www.silkcoding.dev/stalled/Screenshot%202025-10-24%20175229.png)
+
 ## Features
 
 - Detects if the process is critical and disables the critical flag safely.
