@@ -68,3 +68,7 @@ git clone https://github.com/inputtdevv/CriticalProcessKiller.git
 2. Build it into an exe with Visual Studio
 
 3. Run the executable.
+
+
+![What may happen lol](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3cyOGo4dzVtZDMyeWRkczVlaGVpcHY0djF0M3F1MTBpNzVqdG03aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nZ9OnDVJoEaLPlVRc1/giphy.gif)
+
